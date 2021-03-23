@@ -7,4 +7,4 @@ a file.
 
 The result of this section is shown in the following screenshot:
 
-<img src="../img/3.8">
+<img src="../img/3.8.png">

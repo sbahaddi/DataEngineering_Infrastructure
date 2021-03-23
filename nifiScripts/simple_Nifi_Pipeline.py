@@ -10,3 +10,5 @@ In this section, you will create a data pipeline that reads in the data.CSV file
 It will run a query for people over the age of 40, then write out that record to
 a file.
 ""
+
+
