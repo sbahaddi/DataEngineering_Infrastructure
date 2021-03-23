@@ -16,10 +16,10 @@ import pandas as pd
 
 def CSVToJson():
     df = pd.read_csv(
-        '/goinfre/sbahaddi/gits/DataEngineering_Infrastructure/data/faker_data.CSV')
+        '/goinfre/sbahaddi/gits/DataEngineering_Infrastructure/data/faker_data.csv')
     for i, r in df.iterrows():
         print(r['name'])
-    df.to_json('dags/fromAirflow' + str(dt.datetime.now().strftime("%Y%m%d-%H%M%S")) + '.json',
+    df.to_json('dags/fromAirflow.json',
                orient='records')
 
 
@@ -29,8 +29,6 @@ default_args = {
     'retries': 1,
     'retry_delay': dt.timedelta(minutes=5),
 }
-
-# with DAG('MyCSVDAG', default_args=default_args, schedule_interval=timedelta(minutes=5))
 
 dag = DAG(
     'MyCSVDAG',
