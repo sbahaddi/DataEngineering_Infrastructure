@@ -8,3 +8,17 @@ a file.
 The result of this section is shown in the following screenshot:
 
 <img src="../img/3.8.png">
+
+### Reading a file with GetFile
+The first step in your data pipeline is to read in the data.csv file. To do that, take the following steps:
+
+    1. Drag the Processor icon from the NiFi toolbar to the canvas. Search for GetFile and then select it.
+    
+    2. To configure the GetFile processor, you must specify the input directory. In the Python examples earlier in this chapter, I wrote the data.CSV file to my home directory, which is home/paulcrickard, so this is what I will use for the input directory.
+    
+    3. Next, you will need to specify a file filter. This field allows the NiFi expression language, so you could use regular expressions (regex) and specify any file ending with CSV – [^\.].*\.CSV – but for this example, you can just set the value to data.csv.
+    
+    4. Lastly, the Keep Source File property should be set to true. If you leave it as false, NiFi will delete the file once it has processed it. The complete configuration is shown in the following screenshot:
+
+<img src="../img/3.9.png">
+
