@@ -5,3 +5,7 @@ Working with files in NiFi requires many more steps than you had to use when doi
 ## Working with JSON in NiFi
 
 While having a different structure, working with JSON in NiFi is very similar to working with CSV. There are, however, a few processors for dealing exclusively with JSON. In this section, you will build a flow similar to the CSV example – read a file, split it into rows, and write each row to a file – but you will perform some more modifications of the data within the pipeline so that the rows you write to disk are different than what was in the original file. 
+
+### Handling databases with NiFi processors
+
+In the previous sections, you learned how to read and write CSV and JSON files using Python. Reading files is such a common task that tools such as NiFi have prebuilt processors to handle it. In this section, you will build the same data pipeline as in the previous section. In NiFi, 
